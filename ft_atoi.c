@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: juancho <juancho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/28 09:30:38 by jarregui          #+#    #+#             */
-/*   Updated: 2021/04/29 11:56:18 by jarregui         ###   ########.fr       */
+/*   Created: 2021/05/20 19:34:36 by juancho           #+#    #+#             */
+/*   Updated: 2021/05/20 19:35:48 by juancho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <stdio.h>
 #include <stdlib.h>
