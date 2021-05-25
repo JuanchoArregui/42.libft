@@ -6,11 +6,19 @@
 #    By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/25 15:39:13 by jarregui          #+#    #+#              #
-#    Updated: 2021/05/25 16:44:25 by jarregui         ###   ########.fr        #
+#    Updated: 2021/05/25 18:56:49 by jarregui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # check more info about Makefile at: https://stackoverflow.com/c/42network/questions/1604/1605
+
+# nice tutorial:  https://opensource.com/article/18/8/what-how-makefile
+
+#syntax of a typical rule:
+
+#target: prerequisites
+#<TAB> recipe
+
 
 SRCS		=	ft_atoi.c \
 				ft_bzero.c \
@@ -70,5 +78,5 @@ re:				fclean all
 
 bonus:			$(OBJS) $(BONUS_OBJS)
 				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
-
+				
 .PHONY:			all clean fclean re bonus
