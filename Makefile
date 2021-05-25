@@ -1,31 +1,74 @@
-# Define the name of the executable file.
-NAME = bsq
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/05/25 15:39:13 by jarregui          #+#    #+#              #
+#    Updated: 2021/05/25 16:44:25 by jarregui         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-# Define files to include
-SRC =	main.c \
-		fn_map_check_valid.c \
-		fn_map_read.c \
-		fn_map_check_open.c \
-		ft_atoi.c \
-		ft_putchar.c \
-		ft_putnbr.c \
-		ft_putstr.c \
-		ft_stdin.c \
-		ft_isnumeric.c \
-		ft_isprintable.c \
-		fn_strtomap.c \
+# check more info about Makefile at: https://stackoverflow.com/c/42network/questions/1604/1605
 
-INCS = headers.h
-		
+SRCS		=	ft_atoi.c \
+				ft_bzero.c \
+				ft_calloc.c \
+				ft_isalnum.c \
+				ft_isalpha.c \
+				ft_isascii.c \
+				ft_isdigit.c \
+				ft_memccpy.c \
+				ft_memchr.c \
+				ft_memcmp.c \
+				ft_memcpy.c \
+				ft_memmove.c \
+				ft_memset.c \
+				ft_strchr.c \
+				ft_strdup.c \
+				ft_strlcat.c \
+				ft_strlcpy.c \
+				ft_strlen.c \
+				ft_strncmp.c \
+				ft_strnstr.c \
+				ft_strrchr.c \
+				ft_tolower.c \
+				ft_toupper.c	
+OBJS		=	$(patsubst %.c,%.o,$(SRCS))
 
-		
+BONUS		=	ft_lstadd_back.c \
+				ft_lstadd_front.c \
+				ft_lstclear.c \
+				ft_lstdelone.c\
+				ft_lstiter.c \
+				ft_lstlast.c \
+				ft_lstmap.c \
+				ft_lstnew.c \
+				ft_lstsize.c
+BONUS_OBJS	=	$(patsubst %.c,%.o,$(BONUS))
 
-all: $(NAME)
+CC			=	gcc
+CFLAGS		=	-Wall -Wextra -Werror
 
-$(NAME):
-	gcc -Wall -Werror -Wextra ${SRC} -o $(NAME) -I${INCS}
+NAME		=	libft.a
 
-fclean:
-	rm -f $(NAME)
+RM			=	/bin/rm -f
 
-re: fclean all
+all:			$(NAME)
+
+$(NAME):		$(OBJS)
+				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+
+clean:
+				$(RM) $(OBJS) $(BONUS_OBJS)
+
+fclean:			clean
+				$(RM)	$(NAME)
+
+re:				fclean all
+
+bonus:			$(OBJS) $(BONUS_OBJS)
+				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
+.PHONY:			all clean fclean re bonus

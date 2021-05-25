@@ -18,7 +18,6 @@ char	*ft_toupper(char *str)
 }
 
 
-char	*ft_strupcase(char *str);
 
 int	main(void)
 {
@@ -27,7 +26,7 @@ int	main(void)
 	str = (char *)malloc(100);
 	strcpy(str, "&&&& AQU1habia TEXTOynum3r0y_db3_salir#TODO en MaYusculas!");
 	printf("%s\n", str);
-	ft_strupcase(str);
+
 	printf("%s\n", str);
 	free(str);
 	return (0);
