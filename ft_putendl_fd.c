@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/14 12:18:52 by jarregui          #+#    #+#             */
-/*   Updated: 2021/07/14 12:19:14 by jarregui         ###   ########.fr       */
+/*   Created: 2021/07/14 13:18:45 by jarregui          #+#    #+#             */
+/*   Updated: 2021/07/14 13:19:15 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_putendl_fd(char *s, int fd)
 {
 
 }

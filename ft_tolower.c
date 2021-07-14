@@ -1,8 +1,18 @@
-#include<unistd.h>
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/07/14 12:43:24 by jarregui          #+#    #+#             */
+/*   Updated: 2021/07/14 12:44:15 by jarregui         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
+
+int	ft_tolower(int c)
 char	*ft_strlowcase(char *str)
 {
 	int	i;
@@ -18,17 +28,15 @@ char	*ft_strlowcase(char *str)
 }
 
 
-char	*ft_strlowcase(char *str);
+// int	main(void)
+// {
+// 	char	*str;
 
-int	main(void)
-{
-	char	*str;
-
-	str = (char *)malloc(100);
-	strcpy(str, "AQU1habiaTEXTOy_db3_salir # TODOen minusculas");
-	printf("%s\n", str);
-	ft_strlowcase(str);
-	printf("%s\n", str);
-	free(str);
-	return (0);
-}
+// 	str = (char *)malloc(100);
+// 	strcpy(str, "AQU1habiaTEXTOy_db3_salir # TODOen minusculas");
+// 	printf("%s\n", str);
+// 	ft_strlowcase(str);
+// 	printf("%s\n", str);
+// 	free(str);
+// 	return (0);
+// }

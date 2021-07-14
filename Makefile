@@ -3,48 +3,61 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+         #
+#    By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/25 15:39:13 by jarregui          #+#    #+#              #
-#    Updated: 2021/05/25 18:56:49 by jarregui         ###   ########.fr        #
+#    Updated: 2021/07/14 13:34:14 by jarregui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# check more info about Makefile at: https://stackoverflow.com/c/42network/questions/1604/1605
-
-# nice tutorial:  https://opensource.com/article/18/8/what-how-makefile
+# nice tutorials about Makefile:  
+#		https://stackoverflow.com/c/42network/questions/1604/1605
+#		https://makefiletutorial.com/
+#		https://opensource.com/article/18/8/what-how-makefile
 
 #syntax of a typical rule:
+#		target: prerequisites
+#		<TAB> recipe
 
-#target: prerequisites
-#<TAB> recipe
 
 
-SRCS		=	ft_atoi.c \
+# VARIABLES DECLARATION:
+SRC			=	ft_atoi.c \
 				ft_bzero.c \
 				ft_calloc.c \
 				ft_isalnum.c \
 				ft_isalpha.c \
 				ft_isascii.c \
 				ft_isdigit.c \
+				ft_isprint.c \
+				ft_itoa.c \
 				ft_memccpy.c \
 				ft_memchr.c \
 				ft_memcmp.c \
 				ft_memcpy.c \
 				ft_memmove.c \
 				ft_memset.c \
+				ft_putchar_fd.c \
+				ft_putendl_fd.c \
+				ft_putnbr_fd.c \
+				ft_putstr_fd.c \
+				ft_split.c
 				ft_strchr.c \
 				ft_strdup.c \
+				ft_striteri.c \
+				ft_strjoin.c \
 				ft_strlcat.c \
 				ft_strlcpy.c \
 				ft_strlen.c \
+				ft_strmapi.c \
 				ft_strncmp.c \
 				ft_strnstr.c \
 				ft_strrchr.c \
+				ft_strtrim.c \
+				ft_substr.c \
 				ft_tolower.c \
 				ft_toupper.c	
-OBJS		=	$(patsubst %.c,%.o,$(SRCS))
-
+OBJ			=	$(SRC:%.c=%.o)
 BONUS		=	ft_lstadd_back.c \
 				ft_lstadd_front.c \
 				ft_lstclear.c \
@@ -53,30 +66,35 @@ BONUS		=	ft_lstadd_back.c \
 				ft_lstlast.c \
 				ft_lstmap.c \
 				ft_lstnew.c \
-				ft_lstsize.c
-BONUS_OBJS	=	$(patsubst %.c,%.o,$(BONUS))
-
+				ft_lstsize.c \
+BONUS_OBJ	=	$(BONUS:%.c=%.o)
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
-
 NAME		=	libft.a
-
 RM			=	/bin/rm -f
+
+
+
+# RULES DECLARATION:
+.PHONY:			all clean fclean re bonus
 
 all:			$(NAME)
 
-$(NAME):		$(OBJS)
-				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+$(NAME):		$(OBJ)
+				$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+				@$(AR) $(NAME) $(OBJ)
+				@ranlib $(NAME)
+				@echo "[INFO: Library $(NAME) created]"
 
 clean:
-				$(RM) $(OBJS) $(BONUS_OBJS)
+				$(RM) $(OBJ) $(BONUS_OBJ)
+				@echo "[INFO: Objects deleted]"
 
 fclean:			clean
 				$(RM)	$(NAME)
+				@echo "[INFO: $(NAME) deleted]"
 
 re:				fclean all
 
-bonus:			$(OBJS) $(BONUS_OBJS)
-				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
-				
-.PHONY:			all clean fclean re bonus
+bonus:			$(OBJ) $(BONUS_OBJ)
+				ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)

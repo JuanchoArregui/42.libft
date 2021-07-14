@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/14 12:18:52 by jarregui          #+#    #+#             */
-/*   Updated: 2021/07/14 12:19:14 by jarregui         ###   ########.fr       */
+/*   Created: 2021/07/14 13:00:53 by jarregui          #+#    #+#             */
+/*   Updated: 2021/07/14 13:02:56 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
 
 }

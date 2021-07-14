@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 15:28:20 by jarregui          #+#    #+#             */
-/*   Updated: 2021/04/22 16:01:56 by jarregui         ###   ########.fr       */
+/*   Updated: 2021/07/14 12:41:02 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+#include "libft.h"
+
+unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
 {
 	unsigned int	length;
 	unsigned int	i;
@@ -23,10 +25,10 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	{
 		while (src[i] != '\0' && i < (size - 1))
 		{
-			dest[i] = src[i];
+			dst[i] = src[i];
 			++i;
 		}
-		dest[i] = '\0';
+		dst[i] = '\0';
 	}
 	return (length);
 }

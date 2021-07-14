@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/14 12:18:52 by jarregui          #+#    #+#             */
-/*   Updated: 2021/07/14 12:19:14 by jarregui         ###   ########.fr       */
+/*   Created: 2021/07/14 13:09:27 by jarregui          #+#    #+#             */
+/*   Updated: 2021/07/14 13:09:57 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 
 }
