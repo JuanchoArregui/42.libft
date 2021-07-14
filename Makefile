@@ -6,7 +6,7 @@
 #    By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/25 15:39:13 by jarregui          #+#    #+#              #
-#    Updated: 2021/07/14 13:34:14 by jarregui         ###   ########.fr        #
+#    Updated: 2021/07/14 22:48:03 by jarregui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,8 +41,9 @@ SRC			=	ft_atoi.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c \
 				ft_putstr_fd.c \
-				ft_split.c
+				ft_split.c \
 				ft_strchr.c \
+				ft_strcpy.c \
 				ft_strdup.c \
 				ft_striteri.c \
 				ft_strjoin.c \
@@ -66,7 +67,7 @@ BONUS		=	ft_lstadd_back.c \
 				ft_lstlast.c \
 				ft_lstmap.c \
 				ft_lstnew.c \
-				ft_lstsize.c \
+				ft_lstsize.c
 BONUS_OBJ	=	$(BONUS:%.c=%.o)
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror

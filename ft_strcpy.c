@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/14 12:23:03 by jarregui          #+#    #+#             */
-/*   Updated: 2021/07/14 23:25:27 by jarregui         ###   ########.fr       */
+/*   Created: 2021/07/14 22:49:47 by jarregui          #+#    #+#             */
+/*   Updated: 2021/07/14 22:54:44 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, unsigned int n)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	unsigned char		*dest;
-	unsigned const char	*source;
+	unsigned int	i;
 
-	dest = (unsigned char *)dst;
-	source = (unsigned const char *)src;
-	while ((dest != 0 || source != 0) && n--)
-		dest[n] = source[n];
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dst[i] = src[i];
+		i++;
+		dst[i] = '\0';
+	}
 	return (dst);
 }

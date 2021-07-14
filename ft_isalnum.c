@@ -6,7 +6,7 @@
 /*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 12:00:07 by jarregui          #+#    #+#             */
-/*   Updated: 2021/07/14 12:00:41 by jarregui         ###   ########.fr       */
+/*   Updated: 2021/07/14 22:27:54 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
+	return (0);
 }
