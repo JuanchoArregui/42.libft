@@ -6,7 +6,7 @@
 #    By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/25 15:39:13 by jarregui          #+#    #+#              #
-#    Updated: 2022/11/02 20:45:40 by jarregui         ###   ########.fr        #
+#    Updated: 2022/11/02 20:53:57 by jarregui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,11 +75,12 @@ OBJS_BONUS	=	${SRCS_BONUS:.c=.o}
 
 # RULES DECLARATION:
 all:			${NAME}
+
 ${NAME}:		${OBJS}
 					ar -rc ${NAME} ${OBJS}
 					ranlib ${NAME}
 
-clean: 
+clean:
 				${RM} ${OBJS} ${OBJS_BONUS}
 
 fclean:			clean
@@ -89,6 +90,6 @@ bonus:			${OBJS} ${OBJS_BONUS}
 					ar rc ${NAME} ${OBJS_BONUS}
 					ranlib ${NAME}
 
-re: 	fclean all
+re:				fclean all
 
 .PHONY:			all clean fclean re bonus
