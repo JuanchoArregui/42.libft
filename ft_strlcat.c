@@ -6,7 +6,7 @@
 /*   By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 15:48:36 by jarregui          #+#    #+#             */
-/*   Updated: 2022/11/02 18:56:23 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/02 19:38:51 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,22 @@
 
 unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size)
 {
+	unsigned int	len;
 	unsigned int	i;
-	unsigned int	j;
 
+	len = 0;
 	i = 0;
 	while (dst[i] && i < size)
 		i++;
-	j = i;
-	while (src[i - j] && i + 1 < size)
+	len = i;
+	while (src[i - len] && i + 1 < size)
 	{
-		dst[i] = src[i - j];
+		dst[i] = src[i - len];
 		i++;
 	}
-	if (j < size)
+	if (len < size)
 		dst[i] = '\0';
-	return (j + ft_str_length(src));
+	return (len + ft_strlen(src));
 }
 
 /*

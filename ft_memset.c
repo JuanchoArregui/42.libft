@@ -3,14 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 12:24:06 by jarregui          #+#    #+#             */
-/*   Updated: 2021/07/14 14:52:28 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/02 19:17:16 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	*ft_memset(void *b, int c, unsigned int len)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (i < len)
+	{
+		*(unsigned char *)(b + i) = (unsigned char) c;
+		i++;
+	}
+	return(b);
+}
+
+/*
+DESCRIPTION
+     The memset() function writes len bytes of value c (converted to an unsigned char) to the string b.
+
+RETURN VALUES
+     The memset() function returns its first argument.
+*/
+
 
 /*This function is a copy of the memset function in the string.h library.
 * According to the man the memset function writes len bytes of value c
@@ -32,21 +54,7 @@
 * loop over again until len is no longer greater than 0. We then return
 * b.*/
 
-void	*ft_memset(void *b, int c, unsigned int len)
-{
-	unsigned char *p;
 
-	p = (char *)b;
-	while (len > 0)
-	{
-		p[len - 1] = c;
-		len--;
-	}
-	return(b);
-}
-
-
-//Check esto es antiguo:
 // int main(void)
 // {
 // 	// Fill 8 characters starting from str[13] with '.'

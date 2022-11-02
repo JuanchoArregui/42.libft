@@ -6,7 +6,7 @@
 /*   By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 12:22:37 by jarregui          #+#    #+#             */
-/*   Updated: 2022/11/02 18:51:03 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/02 19:11:51 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,13 @@ int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
 	unsigned int	i;
 
 	i = 0;
-	if (n == 0 || dst == src)
-		return (dst);
 	while (i < n)
 	{
-		*(unsigned char *)(dst + i) = *(unsigned char *)(src + i);
+		if (*(unsigned char *)(s1 + i) != *(unsigned char *)(s2 + i))
+			return (*(unsigned char *)(s1 + i) - *(unsigned char *)(s2 + i));
 		i++;
 	}
-	return (dst);
+	return (0);
 }
 
 /*

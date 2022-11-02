@@ -3,32 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 12:45:08 by jarregui          #+#    #+#             */
-/*   Updated: 2021/07/14 12:45:52 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/02 19:50:39 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int	ft_toupper(int c)
-char	*ft_toupper(char *str)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{	
-		if ((str[i] >= 'a') && (str[i] <= 'z'))
-			str[i] = str[i] - 32;
-		i++;
-	}
-	return (str);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
 }
 
 
-
+// esto es de mi función antigua ft_struppercase. revisar este main --->
+//
 // int	main(void)
 // {
 // 	char	*str;

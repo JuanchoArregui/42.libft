@@ -6,7 +6,7 @@
 #    By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/25 15:39:13 by jarregui          #+#    #+#              #
-#    Updated: 2022/11/02 19:05:48 by jarregui         ###   ########.fr        #
+#    Updated: 2022/11/02 19:32:39 by jarregui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,6 @@ SRC			=	ft_atoi.c \
 				ft_putstr_fd.c \
 				ft_split.c \
 				ft_strchr.c \
-				ft_strcpy.c \
 				ft_strdup.c \
 				ft_striteri.c \
 				ft_strjoin.c \
