@@ -6,7 +6,7 @@
 #    By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/25 15:39:13 by jarregui          #+#    #+#              #
-#    Updated: 2022/11/02 19:32:39 by jarregui         ###   ########.fr        #
+#    Updated: 2022/11/02 20:45:40 by jarregui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,9 +20,12 @@
 #		<TAB> recipe
 
 
-
 # VARIABLES DECLARATION:
-SRC			=	ft_atoi.c \
+CC			=	gcc
+CFLAGS		=	-Wall -Wextra -Werror
+NAME		=	libft.a
+RM			=	/bin/rm -f
+SRCS		=	ft_atoi.c \
 				ft_bzero.c \
 				ft_calloc.c \
 				ft_isalnum.c \
@@ -56,8 +59,8 @@ SRC			=	ft_atoi.c \
 				ft_substr.c \
 				ft_tolower.c \
 				ft_toupper.c	
-OBJ			=	$(SRC:%.c=%.o)
-BONUS		=	ft_lstadd_back.c \
+
+SRCS_BONUS	=	ft_lstadd_back.c \
 				ft_lstadd_front.c \
 				ft_lstclear.c \
 				ft_lstdelone.c\
@@ -66,34 +69,26 @@ BONUS		=	ft_lstadd_back.c \
 				ft_lstmap.c \
 				ft_lstnew.c \
 				ft_lstsize.c
-BONUS_OBJ	=	$(BONUS:%.c=%.o)
-CC			=	gcc
-CFLAGS		=	-Wall -Wextra -Werror
-NAME		=	libft.a
-RM			=	/bin/rm -f
 
-
+OBJS		=	${SRCS:.c=.o}
+OBJS_BONUS	=	${SRCS_BONUS:.c=.o}
 
 # RULES DECLARATION:
-.PHONY:			all clean fclean re bonus
+all:			${NAME}
+${NAME}:		${OBJS}
+					ar -rc ${NAME} ${OBJS}
+					ranlib ${NAME}
 
-all:			$(NAME)
-
-$(NAME):		$(OBJ)
-				$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-				@$(AR) $(NAME) $(OBJ)
-				@ranlib $(NAME)
-				@echo "[INFO: Library $(NAME) created]"
-
-clean:
-				$(RM) $(OBJ) $(BONUS_OBJ)
-				@echo "[INFO: Objects deleted]"
+clean: 
+				${RM} ${OBJS} ${OBJS_BONUS}
 
 fclean:			clean
-				$(RM)	$(NAME)
-				@echo "[INFO: $(NAME) deleted]"
+					${RM} ${NAME}
 
-re:				fclean all
+bonus:			${OBJS} ${OBJS_BONUS}
+					ar rc ${NAME} ${OBJS_BONUS}
+					ranlib ${NAME}
 
-bonus:			$(OBJ) $(BONUS_OBJ)
-				ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
+re: 	fclean all
+
+.PHONY:			all clean fclean re bonus
