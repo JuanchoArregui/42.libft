@@ -6,7 +6,7 @@
 /*   By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 16:20:20 by jarregui          #+#    #+#             */
-/*   Updated: 2022/11/02 19:45:06 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/03 14:57:57 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ t_list			*ft_lstnew(void *content); /*MISSING  -------> Bonus*/
 int				ft_lstsize(t_list *lst); /* MISSING -------> Bonus*/
 void			*ft_memchr(const void *s, int c, unsigned int n); /* OK */
 int				ft_memcmp(const void *s1, const void *s2, unsigned int n); /* OK */
-void			*ft_memcpy(void *dst, const void *src, unsigned int n); /* OK */
-void			*ft_memmove(void *dst, const void *src, unsigned int len); /* OK */
+void			*ft_memcpy(void *dst, const void *src, size_t n); /* OK */
+void			*ft_memmove(void *dst, const void *src, size_t len); /* OK */
 void			*ft_memset(void *b, int c, unsigned int len); /* OK */
 void			ft_putchar_fd(char c, int fd); /* OK --> P2*/
 void			ft_putendl_fd(char *s, int fd); /* OK --> P2*/
