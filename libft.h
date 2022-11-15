@@ -6,7 +6,7 @@
 /*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 16:20:20 by jarregui          #+#    #+#             */
-/*   Updated: 2022/11/15 16:04:51 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/15 16:12:49 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct	s_split_next
 
 int				ft_atoi(const char *str); /* OK */
 void			ft_bzero(void *s, unsigned int n); /* OK */
-void			*ft_calloc(unsigned int count, unsigned int size); /* OK */
+void			*ft_calloc(size_t count, size_t size); /* OK */
 int				ft_isalnum(int c); /* OK */
 int				ft_isalpha(int c); /* OK */
 int				ft_isascii(int c); /* OK */
