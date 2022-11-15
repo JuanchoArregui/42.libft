@@ -6,7 +6,7 @@
 /*   By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 12:23:39 by jarregui          #+#    #+#             */
-/*   Updated: 2022/11/03 14:30:08 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/15 09:35:22 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,23 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if ((unsigned char *)dst > (const unsigned char *)src)
+	unsigned char		*cp_dst;
+	unsigned const char	*cp_src;
+
+	cp_dst = dst;
+	cp_src = src;
+	if (!dst && !src)
+		return (0);
+	if (cp_dst > cp_src)
 	{
+		cp_dst += len;
+		cp_src += len;
 		while (len--)
-			*(unsigned char *)(dst + len) = *(const unsigned char *)(src + len);
+			*--cp_dst = *--cp_src;
 	}
 	else
-		ft_memcpy(dst, src, len);
+		while (len--)
+			*cp_dst++ = *cp_src++;
 	return (dst);
 }
 

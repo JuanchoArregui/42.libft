@@ -6,7 +6,7 @@
 /*   By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 12:23:03 by jarregui          #+#    #+#             */
-/*   Updated: 2022/11/03 15:19:55 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/03 16:41:59 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char		*dest;
-	unsigned const char	*source;
+	unsigned char		*cp_dst;
+	unsigned const char	*cp_src;
 
-	dest = (unsigned char *)dst;
-	source = (unsigned const char *)src;
-	while ((dest != 0 || source != 0) && n--)
-		dest[n] = source[n];
+	cp_dst = (unsigned char *)dst;
+	cp_src = (unsigned const char *)src;
+	while ((cp_dst != 0 || cp_src != 0) && n--)
+		cp_dst[n] = cp_src[n];
 	return (dst);
 }
 
