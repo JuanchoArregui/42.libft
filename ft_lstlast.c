@@ -6,7 +6,7 @@
 /*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 12:18:52 by jarregui          #+#    #+#             */
-/*   Updated: 2021/07/14 12:19:14 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/15 16:45:35 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }

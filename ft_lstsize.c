@@ -6,7 +6,7 @@
 /*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 12:20:25 by jarregui          #+#    #+#             */
-/*   Updated: 2021/07/14 12:20:55 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/15 16:50:21 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,13 @@
 
 int	ft_lstsize(t_list *lst)
 {
+	int	len;
 
+	len = 0;
+	while (lst)
+	{
+		len ++;
+		lst = lst->next;
+	}
+	return (len);
 }

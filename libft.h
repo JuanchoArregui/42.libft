@@ -6,7 +6,7 @@
 /*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 16:20:20 by jarregui          #+#    #+#             */
-/*   Updated: 2022/11/15 16:12:49 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/15 16:49:01 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,15 @@ int				ft_isascii(int c); /* OK */
 int				ft_isdigit(int c); /* OK */
 int				ft_isprint(int c); /* OK */
 char			*ft_itoa(int n); /*  OK --> P2*/
-void			ft_lstadd_back(t_list **alst, t_list *new); /* MISSING -------> Bonus*/
-void			ft_lstadd_front(t_list **alst, t_list *new); /* MISSING -------> Bonus*/
-void			ft_lstclear(t_list **lst, void (*del)(void*)); /* MISSING -------> Bonus*/
-void			ft_lstdelone(t_list *lst, void (*del)(void*)); /* MISSING -------> Bonus*/
-void			ft_lstiter(t_list *lst, void (*f)(void*)); /* MISSING -------> Bonus*/
-t_list			*ft_lstlast(t_list *lst); /* MISSING -------> Bonus*/
-t_list			*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *)); /* MISSING -------> Bonus*/
-t_list			*ft_lstnew(void *content); /*MISSING  -------> Bonus*/
-int				ft_lstsize(t_list *lst); /* MISSING -------> Bonus*/
+void			ft_lstadd_back(t_list **lst, t_list *new); /* OK -------> Bonus*/
+void			ft_lstadd_front(t_list **lst, t_list *new); /* OK -------> Bonus*/
+void			ft_lstclear(t_list **lst, void (*del)(void*)); /* OK -------> Bonus*/
+void			ft_lstdelone(t_list *lst, void (*del)(void*)); /* OK -------> Bonus*/
+void			ft_lstiter(t_list *lst, void (*f)(void*)); /* OK -------> Bonus*/
+t_list			*ft_lstlast(t_list *lst); /* OK -------> Bonus*/
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void *)); /* OK -------> Bonus*/
+t_list			*ft_lstnew(void *content); /* OK  -------> Bonus*/
+int				ft_lstsize(t_list *lst); /* OK -------> Bonus*/
 void			*ft_memchr(const void *s, int c, unsigned int n); /* OK */
 int				ft_memcmp(const void *s1, const void *s2, unsigned int n); /* OK */
 void			*ft_memcpy(void *dst, const void *src, size_t n); /* OK */
