@@ -6,7 +6,7 @@
 /*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 16:20:20 by jarregui          #+#    #+#             */
-/*   Updated: 2022/11/15 14:35:26 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/15 16:04:51 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ size_t			ft_strlcpy(char *dst, const char *src, size_t size); /* OK */
 size_t			ft_strlen(const char *s); /* OK */
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char)); /* OK --> P2*/
 int				ft_strncmp(const char *s1, const char *s2, unsigned int n); /* OK */
-char			*ft_strnstr(const char *haystack, const char *needle, unsigned int len); /* OK */
+char			*ft_strnstr(const char *haystack, const char *needle, size_t len); /* OK */
 char			*ft_strrchr(const char *s, int c); /* OK */
 char			*ft_strtrim(char const *s1, char const *set); /* OK --> P2*/
 char			*ft_substr(char const *s, unsigned int start, size_t len); /* OK --> P2*/

@@ -3,27 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 12:42:12 by jarregui          #+#    #+#             */
-/*   Updated: 2022/11/02 18:59:01 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/15 16:10:24 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, unsigned int len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
+	size_t	j;
 
-	if (*needle == 0)
+	i = 0;
+	if (!(*needle))
 		return ((char *)haystack);
-	i = ft_strlen(needle);
-	while (*haystack && i <= len--)
+	if (!len)
+		return (NULL);
+	while (haystack[i] && i < len)
 	{
-		if (!(ft_strncmp((char *)haystack, (char *)needle, i)))
-			return ((char *)haystack);
-		haystack++;
+		j = 0;
+		while (haystack[i + j] == needle[j] && haystack[i + j] && i + j < len)
+			j ++;
+		if (needle[j] == '\0')
+			return ((char *)haystack + i);
+		i ++;
 	}
 	return (NULL);
 }
