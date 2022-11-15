@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 16:20:20 by jarregui          #+#    #+#             */
-/*   Updated: 2022/11/03 14:57:57 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/15 14:35:26 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,9 @@ char			*ft_strchr(const char *s, int c); /* OK */
 char			*ft_strdup(const char *s1); /* OK */
 void			ft_striteri(char *s, void (*f)(unsigned int, char*)); /* OK --> P2*/
 char			*ft_strjoin(char const *s1, char const *s2); /* OK --> P2*/
-unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size); /* OK */
-unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size); /* OK */
-unsigned int	ft_strlen(const char *s); /* OK */
+size_t			ft_strlcat(char *dst, const char *src, size_t size); /* OK */
+size_t			ft_strlcpy(char *dst, const char *src, size_t size); /* OK */
+size_t			ft_strlen(const char *s); /* OK */
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char)); /* OK --> P2*/
 int				ft_strncmp(const char *s1, const char *s2, unsigned int n); /* OK */
 char			*ft_strnstr(const char *haystack, const char *needle, unsigned int len); /* OK */
