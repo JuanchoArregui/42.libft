@@ -6,7 +6,7 @@
 /*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 13:08:01 by jarregui          #+#    #+#             */
-/*   Updated: 2022/11/15 13:20:44 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/16 16:14:39 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static size_t	ft_lettercount(const char *s, int c)
 	return (i);
 }
 
-static char	**ft_free (const char **str, size_t len)
+static char	**ft_free(const char **str, size_t len)
 {
 	while (len--)
 		free ((void *)str[len]);

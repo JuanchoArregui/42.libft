@@ -6,7 +6,7 @@
 /*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 12:21:57 by jarregui          #+#    #+#             */
-/*   Updated: 2022/11/15 13:19:58 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/16 16:04:26 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,3 @@ void	*ft_memchr(const void *s, int c, unsigned int n)
 	}
 	return (NULL);
 }
-
-/* 
-DESCRIPTION: The memchr() function locates the first occurrence of c (converted to an unsigned char) in string s.
-RETURN VALUES: The memchr() function returns a pointer to the byte located, or NULL if no such byte exists within n bytes.
-*/

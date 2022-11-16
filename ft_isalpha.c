@@ -6,13 +6,13 @@
 /*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 12:01:28 by jarregui          #+#    #+#             */
-/*   Updated: 2021/07/14 22:31:05 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/16 16:02:40 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	if (!((c >= 'a' && c <= 'z')
 			|| (c >= 'A' && c <= 'Z')))

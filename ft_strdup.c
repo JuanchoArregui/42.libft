@@ -6,13 +6,13 @@
 /*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 12:34:50 by jarregui          #+#    #+#             */
-/*   Updated: 2022/11/15 13:20:49 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/11/16 16:15:13 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			*ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	char	*s2;
 
@@ -22,9 +22,3 @@ char			*ft_strdup(const char *s1)
 	ft_strlcpy(s2, s1, (ft_strlen(s1) + 1));
 	return (s2);
 }
-
-/*
-DESCRIPTION: The strdup() function allocates sufficient memory for a copy of the string s1, does the copy, and returns a pointer to it.  The pointer may subsequently be used as an argument to the function free(3).
-If insufficient memory is available, NULL is returned and errno is set to ENOMEM.
-The strndup() function copies at most n characters from the string s1 always NUL terminating the copied string.
-*/
