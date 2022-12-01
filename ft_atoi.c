@@ -6,7 +6,7 @@
 /*   By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 19:34:36 by juancho           #+#    #+#             */
-/*   Updated: 2022/11/16 17:59:42 by jarregui         ###   ########.fr       */
+/*   Updated: 2022/12/01 14:40:32 by jarregui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	while (str[i] == '-' || str[i] == '+')
+	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
 			sign *= -1;
@@ -36,3 +36,21 @@ int	ft_atoi(const char *str)
 	}
 	return ((int)(sign * nb));
 }
+
+/*
+int	main(void)
+{
+	char	*number;
+
+	number = "+9223372036854775807";
+
+	printf("\nSTRING: %s", number);
+	printf("\nft_atoi: %d", ft_atoi(number));
+	printf("\natoi: %d", atoi(number));
+	printf("\n");
+	printf("\n(int)nb: %d\n", (int)(-2147483654));
+
+
+	return (0);
+}
+*/
