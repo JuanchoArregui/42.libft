@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jarregui <jarregui@student.42.fr>          +#+  +:+       +#+         #
+#    By: jarregui <jarregui@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/25 15:39:13 by jarregui          #+#    #+#              #
-#    Updated: 2022/11/02 20:54:07 by jarregui         ###   ########.fr        #
+#    Updated: 2022/12/15 13:36:53 by jarregui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@
 #		https://stackoverflow.com/c/42network/questions/1604/1605
 #		https://makefiletutorial.com/
 #		https://opensource.com/article/18/8/what-how-makefile
+
 
 #syntax of a typical rule:
 #		target: prerequisites
